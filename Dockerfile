@@ -1,5 +1,7 @@
 FROM rocker/r-base:latest
 
-COPY /myScript.R /myScript.R
+COPY /packages.R /packages.R
+RUN Rscript /packages.R
 
+COPY /myScript.R /myScript.R
 RUN Rscript /myScript.R

@@ -1,3 +1,5 @@
 FROM rocker/r-base:latest
 
-RUN Rscript -e cat('hello')
+COPY /myScript.R /myScript.R
+
+RUN Rscript /myScript.R
